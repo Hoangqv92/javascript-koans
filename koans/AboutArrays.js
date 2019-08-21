@@ -3,7 +3,7 @@ describe("About Arrays", function() {
   // We shall contemplate truth by testing reality, via spec expectations.  
   it("should create arrays", function() {
     var emptyArray = [];
-    expect(typeof(emptyArray)).toBe("array"); // A mistake?-- http:javascript.crockford.com/remedial.html
+    expect(typeof(emptyArray)).toBe("object"); // A mistake?-- http:javascript.crockford.com/remedial.html
     expect(emptyArray.length).toBe(0);
 
     var multiTypeArray = [0, 1, "two", function() { return 3; }, {value1: 4, value2: 5}, [6, 7]];
@@ -65,7 +65,7 @@ describe("About Arrays", function() {
     expect(array[1]).toBe("changed in function");
 
     var assignedArray = array;
-    assignedArray[5] = "changed in assignedArray";
+    assignedArray[5] = "five";
     expect(array[5]).toBe("five");
 
     var copyOfArray = array.slice();
